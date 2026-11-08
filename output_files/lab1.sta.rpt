@@ -1,0 +1,969 @@
+TimeQuest Timing Analyzer report for lab1
+Sun Nov 08 19:46:08 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Reg1R:inst|Q[0]'
+ 12. Slow Model Setup: 'C'
+ 13. Slow Model Hold: 'Reg1R:inst|Q[0]'
+ 14. Slow Model Hold: 'C'
+ 15. Slow Model Minimum Pulse Width: 'C'
+ 16. Slow Model Minimum Pulse Width: 'Reg1R:inst|Q[0]'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'Reg1R:inst|Q[0]'
+ 25. Fast Model Setup: 'C'
+ 26. Fast Model Hold: 'Reg1R:inst|Q[0]'
+ 27. Fast Model Hold: 'C'
+ 28. Fast Model Minimum Pulse Width: 'C'
+ 29. Fast Model Minimum Pulse Width: 'Reg1R:inst|Q[0]'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; lab1                                                              ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; C               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { C }               ;
+; Reg1R:inst|Q[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Reg1R:inst|Q[0] } ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                         ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name      ; Note                                                          ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+; 482.16 MHz  ; 405.02 MHz      ; C               ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 15625.0 MHz ; 213.22 MHz      ; Reg1R:inst|Q[0] ; limit due to hold check                                       ;
++-------------+-----------------+-----------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Reg1R:inst|Q[0] ; -2.336 ; -6.243        ;
+; C               ; -1.074 ; -3.767        ;
++-----------------+--------+---------------+
+
+
++------------------------------------------+
+; Slow Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Reg1R:inst|Q[0] ; -2.345 ; -6.856        ;
+; C               ; 0.848  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Slow Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; C               ; -1.469 ; -11.245       ;
+; Reg1R:inst|Q[0] ; 0.500  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Reg1R:inst|Q[0]'                                                                                    ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; -2.336 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 3.452      ;
+; -2.117 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.748      ;
+; -2.092 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 3.452      ;
+; -2.036 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.667      ;
+; -1.983 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 3.099      ;
+; -1.967 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 3.083      ;
+; -1.945 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 3.061      ;
+; -1.914 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 3.030      ;
+; -1.905 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.536      ;
+; -1.873 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.748      ;
+; -1.839 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 2.955      ;
+; -1.838 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.469      ;
+; -1.792 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.667      ;
+; -1.790 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.917      ;
+; -1.739 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 3.099      ;
+; -1.723 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 3.083      ;
+; -1.701 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 3.061      ;
+; -1.676 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.803      ;
+; -1.670 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 3.030      ;
+; -1.661 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.536      ;
+; -1.640 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.129      ; 2.756      ;
+; -1.595 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 2.955      ;
+; -1.594 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.469      ;
+; -1.590 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.717      ;
+; -1.566 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.197      ;
+; -1.546 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.917      ;
+; -1.478 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 2.109      ;
+; -1.432 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.803      ;
+; -1.396 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.873      ; 2.756      ;
+; -1.349 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.128      ; 1.980      ;
+; -1.346 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.717      ;
+; -1.322 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.197      ;
+; -1.254 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.381      ;
+; -1.234 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 2.109      ;
+; -1.199 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.326      ;
+; -1.105 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 1.872      ; 1.980      ;
+; -1.048 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 2.175      ;
+; -1.010 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.381      ;
+; -0.955 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.326      ;
+; -0.804 ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 2.175      ;
+; -0.756 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 1.264      ; 1.883      ;
+; -0.512 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 2.008      ; 1.883      ;
+; 0.468  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 3.728      ; 2.540      ;
+; 0.682  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 3.864      ; 2.822      ;
+; 0.968  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 3.728      ; 2.540      ;
+; 1.088  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 3.729      ; 2.405      ;
+; 1.182  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 3.864      ; 2.822      ;
+; 1.212  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 4.472      ; 2.540      ;
+; 1.426  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 4.608      ; 2.822      ;
+; 1.588  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 3.729      ; 2.405      ;
+; 1.712  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 4.472      ; 2.540      ;
+; 1.832  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 4.473      ; 2.405      ;
+; 1.926  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 4.608      ; 2.822      ;
+; 2.332  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 4.473      ; 2.405      ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'C'                                                                                            ;
++--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.074 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 2.112      ;
+; -1.052 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[3] ; C            ; C           ; 1.000        ; 0.000      ; 2.090      ;
+; -0.721 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.759      ;
+; -0.652 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.690      ;
+; -0.596 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[0] ; C            ; C           ; 1.000        ; 0.000      ; 1.634      ;
+; -0.489 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[1] ; C            ; C           ; 1.000        ; 0.000      ; 1.527      ;
+; -0.378 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.416      ;
+; -0.260 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[6] ; C            ; C           ; 1.000        ; 0.000      ; 1.298      ;
+; -0.258 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.296      ;
+; -0.139 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.177      ;
+; -0.108 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 1.146      ;
+; -0.103 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[2] ; C            ; C           ; 1.000        ; 0.000      ; 1.141      ;
+; -0.097 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[4] ; C            ; C           ; 1.000        ; 0.000      ; 1.135      ;
+; -0.096 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[5] ; C            ; C           ; 1.000        ; 0.000      ; 1.134      ;
++--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Reg1R:inst|Q[0]'                                                                                     ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; -2.345 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 4.473      ; 2.405      ;
+; -2.302 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 4.608      ; 2.583      ;
+; -2.209 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 4.472      ; 2.540      ;
+; -1.845 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 4.473      ; 2.405      ;
+; -1.802 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 4.608      ; 2.583      ;
+; -1.709 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 4.472      ; 2.540      ;
+; -1.601 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 3.729      ; 2.405      ;
+; -1.558 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 3.864      ; 2.583      ;
+; -1.465 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 3.728      ; 2.540      ;
+; -1.101 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 3.729      ; 2.405      ;
+; -1.058 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 3.864      ; 2.583      ;
+; -0.965 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 3.728      ; 2.540      ;
+; 0.375  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 1.883      ;
+; 0.608  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 1.980      ;
+; 0.619  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 1.883      ;
+; 0.645  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.153      ;
+; 0.667  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.175      ;
+; 0.737  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.109      ;
+; 0.818  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.326      ;
+; 0.825  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.197      ;
+; 0.852  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 1.980      ;
+; 0.873  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.381      ;
+; 0.889  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.153      ;
+; 0.911  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.175      ;
+; 0.980  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.488      ;
+; 0.981  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.109      ;
+; 1.062  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.326      ;
+; 1.069  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.197      ;
+; 1.097  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.469      ;
+; 1.112  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 2.008      ; 2.620      ;
+; 1.117  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.381      ;
+; 1.164  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.536      ;
+; 1.224  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.488      ;
+; 1.295  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.667      ;
+; 1.341  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.469      ;
+; 1.356  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.264      ; 2.620      ;
+; 1.376  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.872      ; 2.748      ;
+; 1.383  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 2.756      ;
+; 1.408  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.536      ;
+; 1.539  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.667      ;
+; 1.582  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 2.955      ;
+; 1.620  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.128      ; 2.748      ;
+; 1.627  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 2.756      ;
+; 1.657  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 3.030      ;
+; 1.688  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 3.061      ;
+; 1.710  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 3.083      ;
+; 1.726  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 3.099      ;
+; 1.826  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 2.955      ;
+; 1.901  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 3.030      ;
+; 1.932  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 3.061      ;
+; 1.954  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 3.083      ;
+; 1.970  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 3.099      ;
+; 2.079  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 1.873      ; 3.452      ;
+; 2.323  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 1.129      ; 3.452      ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'C'                                                                                            ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.848 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[5] ; C            ; C           ; 0.000        ; 0.000      ; 1.134      ;
+; 0.849 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[4] ; C            ; C           ; 0.000        ; 0.000      ; 1.135      ;
+; 0.855 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[2] ; C            ; C           ; 0.000        ; 0.000      ; 1.141      ;
+; 0.860 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.146      ;
+; 0.891 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.177      ;
+; 1.010 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.296      ;
+; 1.012 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[6] ; C            ; C           ; 0.000        ; 0.000      ; 1.298      ;
+; 1.130 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.416      ;
+; 1.241 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[1] ; C            ; C           ; 0.000        ; 0.000      ; 1.527      ;
+; 1.348 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[0] ; C            ; C           ; 0.000        ; 0.000      ; 1.634      ;
+; 1.404 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.690      ;
+; 1.473 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 1.759      ;
+; 1.804 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[3] ; C            ; C           ; 0.000        ; 0.000      ; 2.090      ;
+; 1.826 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 2.112      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'C'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; C     ; Rise       ; C               ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[4] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[4] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[5] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[5] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[6] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[6] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[7] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; C|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; C|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[0]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[0]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[1]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[1]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[2]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[2]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[3]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[3]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[4]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[4]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[5]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[5]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[6]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[6]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[7]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[7]|clk   ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Reg1R:inst|Q[0]'                                                                         ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                          ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~2|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~2|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|dataa           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|dataa           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst|Q[0]|regout                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst|Q[0]|regout                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[2]                  ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 7.805 ; 7.805 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 7.470 ; 7.470 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 7.685 ; 7.685 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 7.805 ; 7.805 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 8.549 ; 8.549 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 8.214 ; 8.214 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 8.429 ; 8.429 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 8.549 ; 8.549 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 7.470 ; 7.470 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 7.470 ; 7.470 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 7.685 ; 7.685 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 7.805 ; 7.805 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 8.214 ; 8.214 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 8.214 ; 8.214 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 8.429 ; 8.429 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 8.549 ; 8.549 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------+
+; Fast Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Reg1R:inst|Q[0] ; -0.258 ; -0.492        ;
+; C               ; 0.180  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++------------------------------------------+
+; Fast Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; Reg1R:inst|Q[0] ; -1.388 ; -4.088        ;
+; C               ; 0.343  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Fast Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; C               ; -1.222 ; -9.222        ;
+; Reg1R:inst|Q[0] ; 0.500  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Reg1R:inst|Q[0]'                                                                                    ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; -0.258 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.308      ;
+; -0.190 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 1.067      ;
+; -0.163 ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.213      ;
+; -0.155 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 1.032      ;
+; -0.135 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 1.012      ;
+; -0.121 ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.171      ;
+; -0.105 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.155      ;
+; -0.098 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.148      ;
+; -0.096 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 0.973      ;
+; -0.054 ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.104      ;
+; -0.044 ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 1.099      ;
+; -0.017 ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.308      ;
+; -0.002 ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 1.057      ;
+; 0.002  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.898      ; 1.048      ;
+; 0.007  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 0.870      ;
+; 0.026  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 0.851      ;
+; 0.037  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 1.018      ;
+; 0.051  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 1.067      ;
+; 0.072  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.897      ; 0.805      ;
+; 0.078  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.213      ;
+; 0.086  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 1.032      ;
+; 0.106  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 1.012      ;
+; 0.120  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.171      ;
+; 0.136  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.155      ;
+; 0.143  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.148      ;
+; 0.145  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 0.973      ;
+; 0.155  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 0.900      ;
+; 0.178  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 0.877      ;
+; 0.187  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.104      ;
+; 0.197  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 1.099      ;
+; 0.232  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 0.823      ;
+; 0.239  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 1.057      ;
+; 0.243  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.639      ; 1.048      ;
+; 0.248  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 0.870      ;
+; 0.267  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 0.851      ;
+; 0.278  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 1.018      ;
+; 0.313  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.638      ; 0.805      ;
+; 0.313  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.500        ; 0.942      ; 0.742      ;
+; 0.396  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 0.900      ;
+; 0.419  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 0.877      ;
+; 0.473  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 0.823      ;
+; 0.554  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 1.000        ; 0.683      ; 0.742      ;
+; 1.049  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 1.916      ; 0.988      ;
+; 1.157  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 1.961      ; 1.058      ;
+; 1.265  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 1.917      ; 0.945      ;
+; 1.308  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 2.175      ; 0.988      ;
+; 1.416  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 2.220      ; 1.058      ;
+; 1.524  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.500        ; 2.176      ; 0.945      ;
+; 1.549  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 1.916      ; 0.988      ;
+; 1.657  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 1.961      ; 1.058      ;
+; 1.765  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 1.917      ; 0.945      ;
+; 1.808  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 2.175      ; 0.988      ;
+; 1.916  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 2.220      ; 1.058      ;
+; 2.024  ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 1.000        ; 2.176      ; 0.945      ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'C'                                                                                           ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.180 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[3] ; C            ; C           ; 1.000        ; 0.000      ; 0.852      ;
+; 0.196 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.836      ;
+; 0.291 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.741      ;
+; 0.328 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[0] ; C            ; C           ; 1.000        ; 0.000      ; 0.704      ;
+; 0.333 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.699      ;
+; 0.387 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[1] ; C            ; C           ; 1.000        ; 0.000      ; 0.645      ;
+; 0.454 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.578      ;
+; 0.456 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.576      ;
+; 0.465 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[6] ; C            ; C           ; 1.000        ; 0.000      ; 0.567      ;
+; 0.504 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[2] ; C            ; C           ; 1.000        ; 0.000      ; 0.528      ;
+; 0.505 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[4] ; C            ; C           ; 1.000        ; 0.000      ; 0.527      ;
+; 0.509 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[5] ; C            ; C           ; 1.000        ; 0.000      ; 0.523      ;
+; 0.510 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.522      ;
+; 0.537 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[7] ; C            ; C           ; 1.000        ; 0.000      ; 0.495      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Reg1R:inst|Q[0]'                                                                                     ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node        ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+; -1.388 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 2.220      ; 0.973      ;
+; -1.372 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 2.176      ; 0.945      ;
+; -1.328 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 2.175      ; 0.988      ;
+; -1.129 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 1.961      ; 0.973      ;
+; -1.113 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 1.917      ; 0.945      ;
+; -1.069 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 0.000        ; 1.916      ; 0.988      ;
+; -0.888 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 2.220      ; 0.973      ;
+; -0.872 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 2.176      ; 0.945      ;
+; -0.828 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 2.175      ; 0.988      ;
+; -0.629 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[2] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 1.961      ; 0.973      ;
+; -0.613 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[1] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 1.917      ; 0.945      ;
+; -0.569 ; Reg1R:inst|Q[0] ; rsp:inst1|Y[0] ; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; -0.500       ; 1.916      ; 0.988      ;
+; 0.059  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.742      ;
+; 0.140  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.823      ;
+; 0.167  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 0.805      ;
+; 0.172  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.855      ;
+; 0.194  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.877      ;
+; 0.213  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 0.851      ;
+; 0.217  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.900      ;
+; 0.232  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 0.870      ;
+; 0.261  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.944      ;
+; 0.294  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.683      ; 0.977      ;
+; 0.300  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.742      ;
+; 0.335  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 0.973      ;
+; 0.374  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 1.012      ;
+; 0.381  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.823      ;
+; 0.394  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 1.032      ;
+; 0.408  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 0.805      ;
+; 0.409  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.048      ;
+; 0.413  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.855      ;
+; 0.429  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.638      ; 1.067      ;
+; 0.435  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.877      ;
+; 0.454  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 0.851      ;
+; 0.458  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.900      ;
+; 0.465  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.104      ;
+; 0.473  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 0.870      ;
+; 0.502  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.944      ;
+; 0.509  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.148      ;
+; 0.516  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.155      ;
+; 0.532  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.171      ;
+; 0.535  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[2] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.942      ; 0.977      ;
+; 0.574  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.213      ;
+; 0.576  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 0.973      ;
+; 0.615  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 1.012      ;
+; 0.635  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 1.032      ;
+; 0.650  ; Reg1R:inst|Q[7] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.048      ;
+; 0.669  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; 0.000        ; 0.639      ; 1.308      ;
+; 0.670  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[0] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.897      ; 1.067      ;
+; 0.706  ; Reg1R:inst|Q[4] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.104      ;
+; 0.750  ; Reg1R:inst|Q[6] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.148      ;
+; 0.757  ; Reg1R:inst|Q[3] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.155      ;
+; 0.773  ; Reg1R:inst|Q[2] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.171      ;
+; 0.815  ; Reg1R:inst|Q[5] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.213      ;
+; 0.910  ; Reg1R:inst|Q[1] ; rsp:inst1|Y[1] ; C               ; Reg1R:inst|Q[0] ; -0.500       ; 0.898      ; 1.308      ;
++--------+-----------------+----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'C'                                                                                            ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.343 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.495      ;
+; 0.370 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; Reg1R:inst|Q[6] ; Reg1R:inst|Q[5] ; C            ; C           ; 0.000        ; 0.000      ; 0.523      ;
+; 0.375 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[4] ; C            ; C           ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[2] ; C            ; C           ; 0.000        ; 0.000      ; 0.528      ;
+; 0.415 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[6] ; C            ; C           ; 0.000        ; 0.000      ; 0.567      ;
+; 0.424 ; Reg1R:inst|Q[7] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.576      ;
+; 0.426 ; Reg1R:inst|Q[3] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.578      ;
+; 0.493 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[1] ; C            ; C           ; 0.000        ; 0.000      ; 0.645      ;
+; 0.547 ; Reg1R:inst|Q[2] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.699      ;
+; 0.552 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[0] ; C            ; C           ; 0.000        ; 0.000      ; 0.704      ;
+; 0.589 ; Reg1R:inst|Q[5] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.741      ;
+; 0.684 ; Reg1R:inst|Q[1] ; Reg1R:inst|Q[7] ; C            ; C           ; 0.000        ; 0.000      ; 0.836      ;
+; 0.700 ; Reg1R:inst|Q[4] ; Reg1R:inst|Q[3] ; C            ; C           ; 0.000        ; 0.000      ; 0.852      ;
++-------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'C'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; C     ; Rise       ; C               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; C     ; Rise       ; Reg1R:inst|Q[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; C     ; Rise       ; Reg1R:inst|Q[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; C|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; C|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[0]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[0]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[1]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[1]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[2]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[2]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[3]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[3]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[4]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[4]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[5]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[5]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[6]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[6]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; C     ; Rise       ; inst|Q[7]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; C     ; Rise       ; inst|Q[7]|clk   ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Reg1R:inst|Q[0]'                                                                         ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                          ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~0|datab           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~2|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~2|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|dataa           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|WideOr0~4|dataa           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|WideOr0~4|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; inst1|Y[2]|datac                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; inst|Q[0]|regout                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; inst|Q[0]|regout                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[0]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[1]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Rise       ; rsp:inst1|Y[2]                  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; Reg1R:inst|Q[0] ; Fall       ; rsp:inst1|Y[2]                  ;
++-------+--------------+----------------+------------------+-----------------+------------+---------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 3.802 ; 3.802 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.701 ; 3.701 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 3.766 ; 3.766 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 3.802 ; 3.802 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 4.061 ; 4.061 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.960 ; 3.960 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 4.025 ; 4.025 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 4.061 ; 4.061 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 3.701 ; 3.701 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.701 ; 3.701 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 3.766 ; 3.766 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 3.802 ; 3.802 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 3.960 ; 3.960 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.960 ; 3.960 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 4.025 ; 4.025 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 4.061 ; 4.061 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+--------+--------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.336 ; -2.345 ; N/A      ; N/A     ; -1.469              ;
+;  C               ; -1.074 ; 0.343  ; N/A      ; N/A     ; -1.469              ;
+;  Reg1R:inst|Q[0] ; -2.336 ; -2.345 ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS  ; -10.01 ; -6.856 ; 0.0      ; 0.0     ; -11.245             ;
+;  C               ; -3.767 ; 0.000  ; N/A      ; N/A     ; -11.245             ;
+;  Reg1R:inst|Q[0] ; -6.243 ; -6.856 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 7.805 ; 7.805 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 7.470 ; 7.470 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 7.685 ; 7.685 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 7.805 ; 7.805 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 8.549 ; 8.549 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 8.214 ; 8.214 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 8.429 ; 8.429 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 8.549 ; 8.549 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Y[*]      ; Reg1R:inst|Q[0] ; 3.701 ; 3.701 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.701 ; 3.701 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 3.766 ; 3.766 ; Rise       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 3.802 ; 3.802 ; Rise       ; Reg1R:inst|Q[0] ;
+; Y[*]      ; Reg1R:inst|Q[0] ; 3.960 ; 3.960 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[0]     ; Reg1R:inst|Q[0] ; 3.960 ; 3.960 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[1]     ; Reg1R:inst|Q[0] ; 4.025 ; 4.025 ; Fall       ; Reg1R:inst|Q[0] ;
+;  Y[2]     ; Reg1R:inst|Q[0] ; 4.061 ; 4.061 ; Fall       ; Reg1R:inst|Q[0] ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Transfers                                                               ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; C               ; C               ; 14       ; 0        ; 0        ; 0        ;
+; C               ; Reg1R:inst|Q[0] ; 50       ; 0        ; 50       ; 0        ;
+; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 8        ; 8        ; 8        ; 8        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Hold Transfers                                                                ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; C               ; C               ; 14       ; 0        ; 0        ; 0        ;
+; C               ; Reg1R:inst|Q[0] ; 50       ; 0        ; 50       ; 0        ;
+; Reg1R:inst|Q[0] ; Reg1R:inst|Q[0] ; 8        ; 8        ; 8        ; 8        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 08 19:46:07 2026
+Info: Command: quartus_sta lab1 -c lab1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 3 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name C C
+    Info (332105): create_clock -period 1.000 -name Reg1R:inst|Q[0] Reg1R:inst|Q[0]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst1|WideOr0~0  from: datab  to: combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.336
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.336        -6.243 Reg1R:inst|Q[0] 
+    Info (332119):    -1.074        -3.767 C 
+Info (332146): Worst-case hold slack is -2.345
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.345        -6.856 Reg1R:inst|Q[0] 
+    Info (332119):     0.848         0.000 C 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469       -11.245 C 
+    Info (332119):     0.500         0.000 Reg1R:inst|Q[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst1|WideOr0~0  from: datab  to: combout
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.258
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.258        -0.492 Reg1R:inst|Q[0] 
+    Info (332119):     0.180         0.000 C 
+Info (332146): Worst-case hold slack is -1.388
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.388        -4.088 Reg1R:inst|Q[0] 
+    Info (332119):     0.343         0.000 C 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -9.222 C 
+    Info (332119):     0.500         0.000 Reg1R:inst|Q[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 12927 megabytes
+    Info: Processing ended: Sun Nov 08 19:46:08 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
