@@ -1,0 +1,116 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 208 392 376 408)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "C" (rect 5 0 13 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 128 408 208 448))
+)
+(pin
+	(output)
+	(rect 904 392 1080 408)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Y[2..0]" (rect 90 0 124 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1080 408 1184 480))
+)
+(block
+	(rect 688 336 832 432)
+	(text "rsp" (rect 5 5 23 19)(font "Arial" (font_size 8)))	(text "inst1" (rect 5 81 28 93)(font "Arial" ))	(block_io "Q[7..0]" (input))
+	(block_io "Y[2..0]" (output))
+	(mapper
+		(pt 0 56)
+		(input)
+		(mapping "Q[7..0]" "Q[7..0]" )
+		(annotation_block (mapping)(rect 688 464 784 496))
+	)
+	(mapper
+		(pt 144 56)
+		(output)
+		(mapping "Y[2..0]" "Y[2..0]" )
+		(annotation_block (mapping)(rect 856 440 952 472))
+	)
+)
+(block
+	(rect 456 344 600 440)
+	(text "Reg1R" (rect 5 5 42 19)(font "Arial" (font_size 8)))	(text "inst" (rect 5 81 22 93)(font "Arial" ))	(block_io "C" (input))
+	(block_io "Q[7..0]" (output))
+	(mapper
+		(pt 0 56)
+		(input)
+		(mapping "C" "C" )
+		(annotation_block (mapping)(rect 360 464 448 496))
+	)
+	(mapper
+		(pt 144 48)
+		(output)
+		(mapping "Q[7..0]" "Q[7..0]" )
+		(annotation_block (mapping)(rect 576 472 672 504))
+	)
+)
+(connector
+	(text "C" (rect 386 384 394 396)(font "Arial" ))
+	(pt 376 400)
+	(pt 456 400)
+)
+(connector
+	(pt 896 400)
+	(pt 896 392)
+	(bus)
+)
+(connector
+	(pt 904 400)
+	(pt 896 400)
+	(bus)
+)
+(connector
+	(text "Y[2..0]" (rect 842 376 876 388)(font "Arial" ))
+	(pt 896 392)
+	(pt 832 392)
+	(bus)
+)
+(connector
+	(text "Q[7..0]" (rect 610 376 639 388)(font "Arial" ))
+	(pt 600 392)
+	(pt 688 392)
+	(bus)
+)
