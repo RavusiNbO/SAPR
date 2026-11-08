@@ -1,0 +1,1 @@
+create_clock -name C -period 20.000 [get_ports {C}]
